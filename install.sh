@@ -1,5 +1,5 @@
 #!/bin/bash
-# Se quiser configurar a rede manualmente para acesso rapido a rede, descomente, retire o (#)do começo da linhas 3,4,5,6,7,8
+# Se quiser configurar a rede manualmente para acesso rapido,edite o ip e descomente, retire o (#)do começo da linhas 3,4,5,6,7,8
 #ifconfig eth1 192.168.0.52/24 up
 #route del default gw 192.168.0.4
 #route add default gw 192.168.0.1 eth1
@@ -40,7 +40,7 @@ sudo mkdir /var/log/proxylizer
 sudo chown mikrotik:mikrotik /var/log/proxylizer
 sudo chmod u+w /var/log/proxylizer
 
-#scp -rp mikrotik@192.168.0.53:/home/mikrotik/proxylizercrontab /home/mikrotik/
+
 
 touch /home/mikrotik/proxylizercrontab
 cat <<ATEOFIM >> /home/mikrotik/proxylizercrontab 
@@ -80,8 +80,8 @@ mysql -u root -proot -e "CREATE DATABASE proxylizerdb;"
 mysql -u root -proot radius < ./proxylyzer.sql
 
 radtest user 1234 127.0.0.1:1812 0000 nassecret
-#sudo apt-get install wine
 
-ps aux |grep freeradius |grep -v grep && ps aux |grep apache |grep -v grep && ps aux |grep mysqld |grep -v grep && ps aux |grep syslog-ng |grep -v grep
+# Exibe serviços ativos
+ps aux | grep freeradius | grep -v grep && ps aux | grep apache | grep -v grep && ps aux | grep mysqld |grep -v grep && ps aux | grep syslog-ng |grep -v grep
 
 exit
