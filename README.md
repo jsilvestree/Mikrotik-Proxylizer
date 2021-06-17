@@ -4,3 +4,18 @@ Note: MikroTik has discontinued the Proxylizer project, it will no longer receiv
 
 Este projeto foi descontinuado pela Mikrotik e os arquivos originais não estão mais disponiveis,  coloquei no github para interessados estudarem os codigos 
 Não existe garantias, use por sua conta e risco.
+
+O script install.sh instala no Ubuntu varios pacotes e suas dependencias
+syslog-ng 
+libapache2-mod-php5
+php5-cli 
+php-pear
+php-db 
+php-mail 
+php-mail-mime 
+php-net-smtp
+php5-mysql 
+mysql-server
+mysql-client
+
+Para mais informações leia o documento instalar-proxylizer.pdf no repositório. 
