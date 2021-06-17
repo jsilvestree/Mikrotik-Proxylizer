@@ -1,0 +1,3 @@
+
+GRANT ALL PRIVILEGES ON proxylizerdb.* TO proxylizer@localhost IDENTIFIED BY "password" WITH GRANT OPTION;
+FLUSH PRIVILEGES;
