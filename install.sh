@@ -1,4 +1,5 @@
 #!/bin/bash
+# Se quiser configurar a rede manualmente para acesso rapido a rede, descomente, retire o (#)do começo da linhas 3,4,5,6,7,8
 #ifconfig eth1 192.168.0.52/24 up
 #route del default gw 192.168.0.4
 #route add default gw 192.168.0.1 eth1
