@@ -79,7 +79,7 @@ Esta instalação foi usado o Ubuntu com nome de usuário mikrotik.
 
 ```#scp -rp mikrotik@192.168.0.53:/etc/syslog-ng/syslog-ng.conf /etc/syslog-ng/```
 
-```chmod +x ./syslog-ng.sh
+```chmod +x ./syslog-ng.sh```
 ```mv /etc/syslog-ng/syslog-ng.conf /etc/syslog-ng/syslog-ng.conf-ori```
 
 ```echo "" >> /etc/syslog-ng/syslog-ng.conf```
@@ -89,6 +89,7 @@ Esta instalação foi usado o Ubuntu com nome de usuário mikrotik.
 ```#sudo gedit /etc/syslog-ng/syslog-ng.conf ```
 
 ```mkfifo /home/mikrotik/mysql.pipe```
+
 ```sudo chown mikrotik:mikrotik /home/mikrotik/mysql.pipe```
 
 ```sudo chmod g+w /home/mikrotik/mysql.pipe```
