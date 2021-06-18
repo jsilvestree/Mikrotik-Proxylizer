@@ -48,8 +48,8 @@ mysql-client
 Esta instalação foi usado o Ubuntu com nome de usuário mikrotik.
 
 # Para mais informações leia o documento instalar-proxylizer.pdf no repositório. 
-sudo apt-get update
-sudo apt-get install syslog-ng libapache2-mod-php5 php5-cli php-pear php-db php-mail php-mail-mime php-net-smtp php5-mysql mysql-server mysql-client -y
+*sudo apt-get update
+*sudo apt-get install syslog-ng libapache2-mod-php5 php5-cli php-pear php-db php-mail php-mail-mime php-net-smtp php5-mysql mysql-server mysql-client -y
 
 echo "ServerName mikrotik" >> /etc/apache2/httpd.conf
 
@@ -60,7 +60,7 @@ sudo chown mikrotik:www-data /var/www/proxylizer -R
 sudo chmod g+w /var/www/proxylizer -R
 sudo chmod ug+x /var/www/proxylizer/checkwebproxy.sh /var/www/proxylizer/mail_send.php /var/www/proxylizer/webproxylogtomysql.php
 
-#scp -rp mikrotik@192.168.0.53:/etc/syslog-ng/syslog-ng.conf /etc/syslog-ng/
+*#scp -rp mikrotik@192.168.0.53:/etc/syslog-ng/syslog-ng.conf /etc/syslog-ng/
 chmod +x ./syslog-ng.sh
 mv /etc/syslog-ng/syslog-ng.conf /etc/syslog-ng/syslog-ng.conf-ori
 echo "" >> /etc/syslog-ng/syslog-ng.conf
