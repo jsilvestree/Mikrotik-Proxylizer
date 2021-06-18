@@ -1,7 +1,7 @@
 # Mikrotik Proxylizer
 https://wiki.mikrotik.com/wiki/Proxylizer
 
-*                                                                           
+                                                                           
 *    MikroTik Proxylizer, Web-proxy log analyzer                           
 *    Copyright (C) 2009  MikroTik                                          
 *                                                                          
@@ -19,9 +19,9 @@ https://wiki.mikrotik.com/wiki/Proxylizer
 *    along with this program.  If not, see <http://www.gnu.org/licenses/>.  
 *                                                                           
 
-* Note: MikroTik has discontinued the Proxylizer project, it will no longer receive updates, and technical support will not be available
+ # Note: MikroTik has discontinued the Proxylizer project, it will no longer receive updates, and technical support will not be available
 
-Este projeto foi descontinuado pela Mikrotik e os arquivos originais não estão mais disponiveis,  coloquei no github para interessados estudarem os codigos 
+# Este projeto foi descontinuado pela Mikrotik e os arquivos originais não estão mais disponiveis,  coloquei no github para interessados estudarem os codigos 
 Não existe garantias, use por sua conta e risco.
 
 O script install.sh instala no Ubuntu varios pacotes e suas dependencias
