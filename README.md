@@ -1,5 +1,6 @@
 # Mikrotik Proxylizer
-https://wiki.mikrotik.com/wiki/Proxylizer
+Este link leva para uma páguina antiga que pode ou não estar funcionando!
+        https://wiki.mikrotik.com/wiki/Proxylizer
 
                                                                            
 *    MikroTik Proxylizer, Web-proxy log analyzer                           
@@ -46,4 +47,4 @@ mysql-client
 
 Esta instalação foi usado o debian com nome de usuário mikrotik.
 
-Para mais informações leia o documento instalar-proxylizer.pdf no repositório. 
+# Para mais informações leia o documento instalar-proxylizer.pdf no repositório. 
