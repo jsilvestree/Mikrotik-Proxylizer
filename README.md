@@ -41,7 +41,7 @@ se executar o install.sh ele instalará no Ubuntu varios pacotes e suas dependen
 
 O script espera um usuario do linux chamado mikrotik, se o nome do seu usuario é outro edite o script antes de executalo.
 
-##Alguns pacotes 
+Alguns pacotes Que irá instalar
 syslog-ng 
 libapache2-mod-php5
 php5-cli 
@@ -111,7 +111,8 @@ Esta instalação foi usado o Ubuntu com nome de usuário mikrotik.
 
 
 
-```touch /home/mikrotik/proxylizercrontab
+```bash
+touch /home/mikrotik/proxylizercrontab
 
 cat <<ATEOFIM >> /home/mikrotik/proxylizercrontab 
 
