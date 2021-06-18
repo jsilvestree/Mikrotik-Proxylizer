@@ -58,7 +58,7 @@ Esta instalação foi usado o Ubuntu com nome de usuário mikrotik.
 
 # Para mais informações leia o documento instalar-proxylizer.pdf no repositório Mikrotik-Proxylizer.
 * :computer: Console
-* sudo apt-get update
+```* sudo apt-get update```
 * sudo apt-get install syslog-ng libapache2-mod-php5 php5-cli php-pear php-db php-mail php-mail-mime php-net-smtp php5-mysql mysql-server mysql-client -y
 
 * echo "ServerName mikrotik" >> /etc/apache2/httpd.conf
