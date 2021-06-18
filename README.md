@@ -132,15 +132,24 @@ ATEOFIM
 
 
 ```netstat -antu | grep :1812 # verifica se a porta do freeradius esta em pé```
+
 ```invoke-rc.d freeradius stop```
+
 ```sudo cp -rp /etc/freeradius/ /etc/freeradius-ori```
+
 ```sudo rm -rf /etc/freeradius/```
+
 ```sudo cp -rp ./freeradius/ /etc/```
+
 ```sudo chown mikrotik:freerad /etc/freeradius -R ```
+
 ```ps aux | grep freeradius```
 ```mysql -u root -proot -e "CREATE DATABASE radius;"```
+
 ```mysql -u root -proot radius < ./radius.sql```
+
 ```invoke-rc.d freeradius restart```
+
 ```sudo invoke-rc.d freeradius restart```
 ```netstat -antu | grep :1812```
 ```mysql -u root -proot -e "CREATE DATABASE proxylizerdb;"```
@@ -148,5 +157,6 @@ ATEOFIM
 
 ```radtest user 1234 127.0.0.1:1812 0000 nassecret```
 
-# Exibe serviços ativos
+``` Exibe serviços ativos```
+
 ```ps aux | grep freeradius | grep -v grep && ps aux | grep apache | grep -v grep && ps aux | grep mysqld |grep -v grep && ps aux | grep syslog-ng |grep -v grep```
