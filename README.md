@@ -60,11 +60,11 @@ Esta instalação foi usado o Ubuntu com nome de usuário mikrotik.
 * :computer: Console
 * 
 ``` sudo apt-get update```
-* sudo apt-get install syslog-ng libapache2-mod-php5 php5-cli php-pear php-db php-mail php-mail-mime php-net-smtp php5-mysql mysql-server mysql-client -y
+``` sudo apt-get install syslog-ng libapache2-mod-php5 php5-cli php-pear php-db php-mail php-mail-mime php-net-smtp php5-mysql mysql-server mysql-client -y ```
 
-* echo "ServerName mikrotik" >> /etc/apache2/httpd.conf
+``` echo "ServerName mikrotik" >> /etc/apache2/httpd.conf ```
 
-* sudo tar -xvzf  ./proxylizer_0.1.1b.tar.gz -C /var/www/
+``` sudo tar -xvzf  ./proxylizer_0.1.1b.tar.gz -C /var/www/```
 * cp -rf ./webproxylogtomysql.php  /var/www/proxylizer/
 * chown mikrotik:www-data /var/www/proxylizer -R 
 * sudo chown mikrotik:www-data /var/www/proxylizer -R 
