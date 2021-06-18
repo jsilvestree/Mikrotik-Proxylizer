@@ -107,7 +107,7 @@ Esta instalação foi usado o Ubuntu com nome de usuário mikrotik.
 
 ```sudo chown mikrotik:mikrotik /var/log/proxylizer```
 
-```sudo chmod u+w /var/log/proxylizer```
+```bash sudo chmod u+w /var/log/proxylizer```
 
 
 
