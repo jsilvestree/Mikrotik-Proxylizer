@@ -127,6 +127,7 @@ ATEOFIM
 ```crontab /home/mikrotik/proxylizercrontab```
 
 ```sudo /etc/init.d/apache2 restart```
+# Instala o Freradius
 
 ```sudo apt-get install freeradius-utils freeradius-mysql freeradius -y```
 
