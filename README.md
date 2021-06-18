@@ -36,12 +36,12 @@ Não existe garantias, use por sua conta e risco.
 
 
 
-O script install.sh são alguns passos dp guia de instalação, você pode usar o script ou executar comando por comando.
+O script install.sh são alguns passos do guia de instalação, você pode usar o script ou executar comando por comando.
 se executar o install.sh ele instalará no Ubuntu varios pacotes e suas dependencias.
 
-O script espera um usuario do linux chamado mikrotik, se o nome do seu usuario é outro edite o script antes de executalo,
+O script espera um usuario do linux chamado mikrotik, se o nome do seu usuario é outro edite o script antes de executalo.
 
-Alguns pacotes 
+##Alguns pacotes 
 syslog-ng 
 libapache2-mod-php5
 php5-cli 
