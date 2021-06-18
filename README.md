@@ -111,9 +111,9 @@ Esta instalação foi usado o Ubuntu com nome de usuário mikrotik.
 
 
 
-```touch /home/mikrotik/proxylizercrontab```
+```touch /home/mikrotik/proxylizercrontab
 
-```cat <<ATEOFIM >> /home/mikrotik/proxylizercrontab 
+cat <<ATEOFIM >> /home/mikrotik/proxylizercrontab 
 
 SHELL=/bin/sh
 
