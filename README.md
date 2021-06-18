@@ -123,6 +123,7 @@ PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
  * *     * * *           /var/www/proxylizer/checkwebproxy.sh >> /var/log/proxylizer/checkwebproxy.log &
 ATEOFIM
 
+```
 ```crontab /home/mikrotik/proxylizercrontab```
 
 ```sudo /etc/init.d/apache2 restart```
