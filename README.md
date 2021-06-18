@@ -27,7 +27,7 @@ Mikrotik-Proxylizer will run on popular distros as long as the minimum requireme
 
 * Ubuntu
 * Debian
-* CentOS é preciso modificar varios comando para usar no                                                                            
+* CentOS é preciso modificar varios comandos                                                                            
 
 # Este projeto foi descontinuado pela Mikrotik e os arquivos originais não estão mais disponiveis,  coloquei no github para interessados estudarem os codigos 
 Não existe garantias, use por sua conta e risco.
