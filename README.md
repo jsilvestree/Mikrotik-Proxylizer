@@ -29,10 +29,10 @@ Mikrotik-Proxylizer will run on popular distros as long as the minimum requireme
 * Debian
 * CentOS é preciso modificar varios comandos                                                                            
 
-# Este projeto foi descontinuado pela Mikrotik e os arquivos originais não estão mais disponiveis,  coloquei no github para interessados estudarem os codigos 
+###### Este projeto foi descontinuado pela Mikrotik e os arquivos originais não estão mais disponiveis,  coloquei no github para interessados estudarem os codigos 
 Não existe garantias, use por sua conta e risco.
 
-# Note: MikroTik has discontinued the Proxylizer project, it will no longer receive updates, and technical support will not be available
+###### Note: MikroTik has discontinued the Proxylizer project, it will no longer receive updates, and technical support will not be available
 
 
 
@@ -56,7 +56,7 @@ mysql-client
 
 Esta instalação foi usado o Ubuntu com nome de usuário mikrotik.
 
-# Para mais informações leia o documento instalar-proxylizer.pdf no repositório Mikrotik-Proxylizer.
+###### Para mais informações leia o documento instalar-proxylizer.pdf no repositório Mikrotik-Proxylizer.
 * :computer: Console
 
 ``` sudo apt-get update```
