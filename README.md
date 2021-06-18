@@ -60,12 +60,14 @@ Esta instalação foi usado o Ubuntu com nome de usuário mikrotik.
 * :computer: Console
 * 
 ``` sudo apt-get update```
+
 ``` sudo apt-get install syslog-ng libapache2-mod-php5 php5-cli php-pear php-db php-mail php-mail-mime php-net-smtp php5-mysql mysql-server mysql-client -y ```
 
 ``` echo "ServerName mikrotik" >> /etc/apache2/httpd.conf ```
 
 ``` sudo tar -xvzf  ./proxylizer_0.1.1b.tar.gz -C /var/www/```
-* cp -rf ./webproxylogtomysql.php  /var/www/proxylizer/
+
+```cp -rf ./webproxylogtomysql.php  /var/www/proxylizer/
 * chown mikrotik:www-data /var/www/proxylizer -R 
 * sudo chown mikrotik:www-data /var/www/proxylizer -R 
 * sudo chmod g+w /var/www/proxylizer -R
@@ -124,7 +126,7 @@ Esta instalação foi usado o Ubuntu com nome de usuário mikrotik.
 * mysql -u root -proot -e "CREATE DATABASE proxylizerdb;"
 * mysql -u root -proot radius < ./proxylyzer.sql
 
-* radtest user 1234 127.0.0.1:1812 0000 nassecret
+* radtest user 1234 127.0.0.1:1812 0000 nassecret```
 
 # Exibe serviços ativos
 ps aux | grep freeradius | grep -v grep && ps aux | grep apache | grep -v grep && ps aux | grep mysqld |grep -v grep && ps aux | grep syslog-ng |grep -v grep
