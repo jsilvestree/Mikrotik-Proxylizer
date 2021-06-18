@@ -80,6 +80,7 @@ Esta instalação foi usado o Ubuntu com nome de usuário mikrotik.
 ```#scp -rp mikrotik@192.168.0.53:/etc/syslog-ng/syslog-ng.conf /etc/syslog-ng/```
 
 ```chmod +x ./syslog-ng.sh```
+
 ```mv /etc/syslog-ng/syslog-ng.conf /etc/syslog-ng/syslog-ng.conf-ori```
 
 ```echo "" >> /etc/syslog-ng/syslog-ng.conf```
@@ -92,28 +93,21 @@ Esta instalação foi usado o Ubuntu com nome de usuário mikrotik.
 
 ```sudo chown mikrotik:mikrotik /home/mikrotik/mysql.pipe```
 
-```bash
-sudo chmod g+w /home/mikrotik/mysql.pipe```
+```sudo chmod g+w /home/mikrotik/mysql.pipe```
 
-```
-#scp -rp mikrotik@192.168.0.53:/var/www/proxylizer/webproxylogtomysql.php /var/www/proxylizer/```
+```#scp -rp mikrotik@192.168.0.53:/var/www/proxylizer/webproxylogtomysql.php /var/www/proxylizer/```
 
 
-```
-#gedit /var/www/proxylizer/webproxylogtomysql.php```
+```#gedit /var/www/proxylizer/webproxylogtomysql.php```
 
-```
-sudo /etc/init.d/syslog-ng restart```
+```sudo /etc/init.d/syslog-ng restart```
 
 
-```
-sudo mkdir /var/log/proxylizer```
+```sudo mkdir /var/log/proxylizer```
 
-```
-sudo chown mikrotik:mikrotik /var/log/proxylizer```
+```sudo chown mikrotik:mikrotik /var/log/proxylizer```
 
-```
-sudo chmod u+w /var/log/proxylizer```
+```sudo chmod u+w /var/log/proxylizer```
 
 
 
