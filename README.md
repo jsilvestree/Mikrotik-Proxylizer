@@ -21,7 +21,13 @@ Documentation is found at [Mikrotik-Proxylizer](https://github.com/jsilvestree/M
 *                                                                           
 *    You should have received a copy of the GNU General Public License      
 *    along with this program.  If not, see <http://www.gnu.org/licenses/>.  
-*                                                                           
+## :penguin: Compatibility
+
+Mikrotik-Proxylizer will run on popular distros as long as the minimum requirements are met.
+
+* Ubuntu
+* Debian
+* CentOS é preciso modificar varios comando para usar no                                                                            
 
 # Este projeto foi descontinuado pela Mikrotik e os arquivos originais não estão mais disponiveis,  coloquei no github para interessados estudarem os codigos 
 Não existe garantias, use por sua conta e risco.
