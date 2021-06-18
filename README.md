@@ -1,6 +1,6 @@
 # Mikrotik Proxylizer
 https://wiki.mikrotik.com/wiki/Proxylizer
-/****************************************************************************
+
 *                                                                           *
 *    MikroTik Proxylizer, Web-proxy log analyzer                            *
 *    Copyright (C) 2009  MikroTik                                           *
@@ -18,7 +18,7 @@ https://wiki.mikrotik.com/wiki/Proxylizer
 *    You should have received a copy of the GNU General Public License      *
 *    along with this program.  If not, see <http://www.gnu.org/licenses/>.  *
 *                                                                           *
-****************************************************************************/
+
 Note: MikroTik has discontinued the Proxylizer project, it will no longer receive updates, and technical support will not be available
 
 Este projeto foi descontinuado pela Mikrotik e os arquivos originais não estão mais disponiveis,  coloquei no github para interessados estudarem os codigos 
