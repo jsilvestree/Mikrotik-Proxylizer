@@ -2,7 +2,7 @@
 ## :blue_book: Documentation
 
 Documentation is found at [Mikrotik-Proxylizer](https://github.com/jsilvestree/Mikrotik-Proxylizer) and [Mais Infomações](https://github.com/jsilvestree/Mikrotik-Proxylizer).
-## Este link leva para uma páguina antiga que pode ou não estar funcionando!
+###### Este link leva para uma páguina antiga que pode ou não estar funcionando!
         https://wiki.mikrotik.com/wiki/Proxylizer
 
                                                                            
@@ -21,7 +21,7 @@ Documentation is found at [Mikrotik-Proxylizer](https://github.com/jsilvestree/M
 *                                                                           
 *    You should have received a copy of the GNU General Public License      
 *    along with this program.  If not, see <http://www.gnu.org/licenses/>.  
-## :penguin: Compatibility
+###### :penguin: Compatibility
 
 Mikrotik-Proxylizer will run on popular distros as long as the minimum requirements are met.
 
