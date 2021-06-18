@@ -1,5 +1,5 @@
 # Mikrotik Proxylizer
-## :blue_book: Documentation
+## :blue_book: Documentação
 
 Documentation is found at [Mikrotik-Proxylizer](https://github.com/jsilvestree/Mikrotik-Proxylizer) and [Mais Infomações](https://github.com/jsilvestree/Mikrotik-Proxylizer).
 ###### Este link leva para uma páguina antiga que pode ou não estar funcionando!
