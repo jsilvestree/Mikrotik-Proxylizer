@@ -113,15 +113,15 @@ Esta instalação foi usado o Ubuntu com nome de usuário mikrotik.
 
 ```touch /home/mikrotik/proxylizercrontab```
 
-```cat <<ATEOFIM >> /home/mikrotik/proxylizercrontab ```
+```cat <<ATEOFIM >> /home/mikrotik/proxylizercrontab 
 
-```SHELL=/bin/sh```
+SHELL=/bin/sh
 
-```PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin```
+PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
 
-``` * *     * * *           /var/www/proxylizer/mail_send.php >> /var/log/proxylizer/mail_send_log.log```
-``` * *     * * *           /var/www/proxylizer/checkwebproxy.sh >> /var/log/proxylizer/checkwebproxy.log &```
-```ATEOFIM```
+ * *     * * *           /var/www/proxylizer/mail_send.php >> /var/log/proxylizer/mail_send_log.log```
+ * *     * * *           /var/www/proxylizer/checkwebproxy.sh >> /var/log/proxylizer/checkwebproxy.log &
+ATEOFIM```
 
 ```crontab /home/mikrotik/proxylizercrontab```
 
