@@ -68,22 +68,33 @@ Esta instalação foi usado o Ubuntu com nome de usuário mikrotik.
 ``` sudo tar -xvzf  ./proxylizer_0.1.1b.tar.gz -C /var/www/```
 
 ```cp -rf ./webproxylogtomysql.php  /var/www/proxylizer/```
+
 ```chown mikrotik:www-data /var/www/proxylizer -R ```
+
 ```sudo chown mikrotik:www-data /var/www/proxylizer -R ```
+
 ```sudo chmod g+w /var/www/proxylizer -R```
+
 ```sudo chmod ug+x /var/www/proxylizer/checkwebproxy.sh /var/www/proxylizer/mail_send.php /var/www/proxylizer/webproxylogtomysql.php```
 
 ```#scp -rp mikrotik@192.168.0.53:/etc/syslog-ng/syslog-ng.conf /etc/syslog-ng/```
+
 ```chmod +x ./syslog-ng.sh
 ```mv /etc/syslog-ng/syslog-ng.conf /etc/syslog-ng/syslog-ng.conf-ori```
+
 ```echo "" >> /etc/syslog-ng/syslog-ng.conf```
+
 ```./syslog-ng.sh```
+
 ```#sudo gedit /etc/syslog-ng/syslog-ng.conf ```
 
 ```mkfifo /home/mikrotik/mysql.pipe```
 ```sudo chown mikrotik:mikrotik /home/mikrotik/mysql.pipe```
+
 ```sudo chmod g+w /home/mikrotik/mysql.pipe```
+
 ```#scp -rp mikrotik@192.168.0.53:/var/www/proxylizer/webproxylogtomysql.php /var/www/proxylizer/```
+
 
 ```#gedit /var/www/proxylizer/webproxylogtomysql.php```
 
@@ -91,15 +102,22 @@ Esta instalação foi usado o Ubuntu com nome de usuário mikrotik.
 
 
 ```sudo mkdir /var/log/proxylizer```
+
 ```sudo chown mikrotik:mikrotik /var/log/proxylizer```
+
 ```sudo chmod u+w /var/log/proxylizer```
 
 
 
+
 ```touch /home/mikrotik/proxylizercrontab```
+
 ```cat <<ATEOFIM >> /home/mikrotik/proxylizercrontab ```
+
 ```SHELL=/bin/sh```
+
 ```PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin```
+
 ##  ``````  `````````          /var/www/proxylizer/mail_send.php >> /var/log/proxylizer/mail_send_log.log```
 ##  `````` `````````          /var/www/proxylizer/checkwebproxy.sh >> /var/log/proxylizer/checkwebproxy.log &```
 ```ATEOFIM```
