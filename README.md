@@ -47,80 +47,73 @@ mysql-client
 
 Esta instalação foi usado o Ubuntu com nome de usuário mikrotik.
 
-# Para mais informações leia o documento instalar-proxylizer.pdf no repositório. 
+# Para mais informações leia o documento instalar-proxylizer.pdf no repositório Mikrotik-Proxylizer. 
 * sudo apt-get update
 * sudo apt-get install syslog-ng libapache2-mod-php5 php5-cli php-pear php-db php-mail php-mail-mime php-net-smtp php5-mysql mysql-server mysql-client -y
 
 echo "ServerName mikrotik" >> /etc/apache2/httpd.conf
 
-sudo tar -xvzf  ./proxylizer_0.1.1b.tar.gz -C /var/www/
-cp -rf ./webproxylogtomysql.php  /var/www/proxylizer/
-chown mikrotik:www-data /var/www/proxylizer -R 
-sudo chown mikrotik:www-data /var/www/proxylizer -R 
-sudo chmod g+w /var/www/proxylizer -R
-sudo chmod ug+x /var/www/proxylizer/checkwebproxy.sh /var/www/proxylizer/mail_send.php /var/www/proxylizer/webproxylogtomysql.php
+* sudo tar -xvzf  ./proxylizer_0.1.1b.tar.gz -C /var/www/
+* cp -rf ./webproxylogtomysql.php  /var/www/proxylizer/
+* chown mikrotik:www-data /var/www/proxylizer -R 
+* sudo chown mikrotik:www-data /var/www/proxylizer -R 
+* sudo chmod g+w /var/www/proxylizer -R
+* sudo chmod ug+x /var/www/proxylizer/checkwebproxy.sh /var/www/proxylizer/mail_send.php /var/www/proxylizer/webproxylogtomysql.php
 
-*#scp -rp mikrotik@192.168.0.53:/etc/syslog-ng/syslog-ng.conf /etc/syslog-ng/
-chmod +x ./syslog-ng.sh
-mv /etc/syslog-ng/syslog-ng.conf /etc/syslog-ng/syslog-ng.conf-ori
-echo "" >> /etc/syslog-ng/syslog-ng.conf
-./syslog-ng.sh
-#sudo gedit /etc/syslog-ng/syslog-ng.conf 
+* #scp -rp mikrotik@192.168.0.53:/etc/syslog-ng/syslog-ng.conf /etc/syslog-ng/
+* chmod +x ./syslog-ng.sh
+* mv /etc/syslog-ng/syslog-ng.conf /etc/syslog-ng/syslog-ng.conf-ori
+* echo "" >> /etc/syslog-ng/syslog-ng.conf
+* ./syslog-ng.sh
+* #sudo gedit /etc/syslog-ng/syslog-ng.conf 
 
-mkfifo /home/mikrotik/mysql.pipe
-sudo chown mikrotik:mikrotik /home/mikrotik/mysql.pipe
-sudo chmod g+w /home/mikrotik/mysql.pipe
-#scp -rp mikrotik@192.168.0.53:/var/www/proxylizer/webproxylogtomysql.php /var/www/proxylizer/
+* mkfifo /home/mikrotik/mysql.pipe
+* sudo chown mikrotik:mikrotik /home/mikrotik/mysql.pipe
+* sudo chmod g+w /home/mikrotik/mysql.pipe
+* #scp -rp mikrotik@192.168.0.53:/var/www/proxylizer/webproxylogtomysql.php /var/www/proxylizer/
 
-#gedit /var/www/proxylizer/webproxylogtomysql.php
+* #gedit /var/www/proxylizer/webproxylogtomysql.php
 
-sudo /etc/init.d/syslog-ng restart
-
-
-sudo mkdir /var/log/proxylizer
-sudo chown mikrotik:mikrotik /var/log/proxylizer
-sudo chmod u+w /var/log/proxylizer
+* sudo /etc/init.d/syslog-ng restart
 
 
-
-touch /home/mikrotik/proxylizercrontab
-cat <<ATEOFIM >> /home/mikrotik/proxylizercrontab 
-SHELL=/bin/sh
-PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
-* *     * * *           /var/www/proxylizer/mail_send.php >> /var/log/proxylizer/mail_send_log.log
-* *     * * *           /var/www/proxylizer/checkwebproxy.sh >> /var/log/proxylizer/checkwebproxy.log &
-ATEOFIM
-
-crontab /home/mikrotik/proxylizercrontab
-
-sudo /etc/init.d/apache2 restart
-
-#sudo cp -rp phpmyadmin /var/www/
-#chmod -R /var/www/phpmyadmin/
-#sudo chmod 774 -R /var/www/phpmyadmin
-#sudo chown mikrotik:www-data /var/www/phpmyadmin/ -R 
-#reboot 
-#sudo reboot 
-
-sudo apt-get install freeradius-utils freeradius-mysql freeradius -y
+* sudo mkdir /var/log/proxylizer
+* sudo chown mikrotik:mikrotik /var/log/proxylizer
+* sudo chmod u+w /var/log/proxylizer
 
 
-#netstat -antu | grep :1812 # verifica se a porta do freeradius esta em pé
-invoke-rc.d freeradius stop
-sudo cp -rp /etc/freeradius/ /etc/freeradius-ori
-sudo rm -rf /etc/freeradius/
-sudo cp -rp ./freeradius/ /etc/
-sudo chown mikrotik:freerad /etc/freeradius -R 
-ps aux | grep freeradius
-mysql -u root -proot -e "CREATE DATABASE radius;"
-mysql -u root -proot radius < ./radius.sql
-invoke-rc.d freeradius restart
-sudo invoke-rc.d freeradius restart
-netstat -antu | grep :1812
-mysql -u root -proot -e "CREATE DATABASE proxylizerdb;"
-mysql -u root -proot radius < ./proxylyzer.sql
 
-radtest user 1234 127.0.0.1:1812 0000 nassecret
+* touch /home/mikrotik/proxylizercrontab
+* cat <<ATEOFIM >> /home/mikrotik/proxylizercrontab 
+* SHELL=/bin/sh
+* PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
+* * *     * * *           /var/www/proxylizer/mail_send.php >> /var/log/proxylizer/mail_send_log.log
+* * *     * * *           /var/www/proxylizer/checkwebproxy.sh >> /var/log/proxylizer/checkwebproxy.log &
+* ATEOFIM
+
+* crontab /home/mikrotik/proxylizercrontab
+
+* sudo /etc/init.d/apache2 restart
+
+* sudo apt-get install freeradius-utils freeradius-mysql freeradius -y
+
+
+* netstat -antu | grep :1812 # verifica se a porta do freeradius esta em pé
+* invoke-rc.d freeradius stop
+* sudo cp -rp /etc/freeradius/ /etc/freeradius-ori
+* sudo rm -rf /etc/freeradius/
+* sudo cp -rp ./freeradius/ /etc/
+* sudo chown mikrotik:freerad /etc/freeradius -R 
+* ps aux | grep freeradius
+* mysql -u root -proot -e "CREATE DATABASE radius;"
+* mysql -u root -proot radius < ./radius.sql
+* invoke-rc.d freeradius restart
+* sudo invoke-rc.d freeradius restart
+* netstat -antu | grep :1812
+* mysql -u root -proot -e "CREATE DATABASE proxylizerdb;"
+* mysql -u root -proot radius < ./proxylyzer.sql
+
+* radtest user 1234 127.0.0.1:1812 0000 nassecret
 
 # Exibe serviços ativos
 ps aux | grep freeradius | grep -v grep && ps aux | grep apache | grep -v grep && ps aux | grep mysqld |grep -v grep && ps aux | grep syslog-ng |grep -v grep
