@@ -45,6 +45,6 @@ php5-mysql
 mysql-server
 mysql-client
 
-Esta instalação foi usado o debian com nome de usuário mikrotik.
+Esta instalação foi usado o Ubuntu com nome de usuário mikrotik.
 
 # Para mais informações leia o documento instalar-proxylizer.pdf no repositório. 
